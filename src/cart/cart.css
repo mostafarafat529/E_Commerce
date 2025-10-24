@@ -1,0 +1,16 @@
+/* .cart{
+    margin-top: 80px;
+} */
+
+
+
+@media (max-width : 660px) {
+    .shopping{
+        flex-direction: column;
+        text-align: center;
+    }
+    .shopping img{
+        height: 100px !important;
+        width: 100px !important;
+    }
+}
