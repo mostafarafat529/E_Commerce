@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -21,22 +21,29 @@ if (!PUBLISHABLE_KEY) {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  
-<DataContext>
-  <FunctionCart>
-  <BrowserRouter>
   <React.StrictMode>
- <StrictMode>
-      <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
-        <App />
-        <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false}
-closeOnClick={false} rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light" />
-      </ClerkProvider>
-    </StrictMode>,
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+      <DataContext>
+        <FunctionCart>
+          <BrowserRouter>
+            <App />
+            <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+            />
+          </BrowserRouter>
+        </FunctionCart>
+      </DataContext>
+    </ClerkProvider>
   </React.StrictMode>
-  </BrowserRouter>
-  </FunctionCart>
-</DataContext>
 );
 
 // If you want to start measuring performance in your app, pass a function
