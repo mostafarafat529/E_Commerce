@@ -2,7 +2,7 @@
   "name": "shop-ecommerce",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "/",
   "dependencies": {
     "@clerk/clerk-react": "^5.51.0",
     "@testing-library/dom": "^10.4.1",
